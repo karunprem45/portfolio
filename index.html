@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="paper">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Karuniya Premnath — Data Scientist & AI Engineer. A classic portfolio of machine-learning work." />
+  <meta name="author" content="Karuniya Premnath" />
+  <title>Karuniya Premnath — Data Scientist</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23efe7d6'/><text x='50' y='72' font-size='64' font-family='Georgia,serif' text-anchor='middle' fill='%239d4b2f'>K</text></svg>" />
+</head>
+<body class="loading">
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- Loader -->
+  <div class="loader" id="loader">
+    <div class="loader-mono">KP</div>
+    <div class="loader-line"><span id="loaderBar"></span></div>
+    <div class="loader-cap">Karuniya Premnath — Portfolio</div>
+  </div>
+
+  <!-- Left editorial index rail -->
+  <aside class="rail" id="rail">
+    <a class="rail-mono" data-view="home" title="Home">K<span>P</span></a>
+    <nav class="rail-nav" id="railNav">
+      <button data-view="home"    class="active"><i>01</i><em>Home</em></button>
+      <button data-view="about"><i>02</i><em>About</em></button>
+      <button data-view="work"><i>03</i><em>Work</em></button>
+      <button data-view="resume"><i>04</i><em>Résumé</em></button>
+      <button data-view="awards"><i>05</i><em>Awards</em></button>
+      <button data-view="contact"><i>06</i><em>Contact</em></button>
+    </nav>
+    <div class="rail-foot">
+      <button class="rail-icon" data-view="terminal" title="Open terminal (T)" aria-label="Terminal">&gt;_</button>
+      <button class="rail-icon" id="themeToggle" title="Toggle theme" aria-label="Toggle theme">
+        <span class="ico-sun">☀</span><span class="ico-moon">☾</span>
+      </button>
+    </div>
+  </aside>
+
+  <!-- Mobile top bar -->
+  <header class="topbar">
+    <a class="tb-mono" data-view="home">KP</a>
+    <button class="tb-menu" id="tbMenu" aria-label="Menu"><span></span><span></span></button>
+  </header>
+  <nav class="mobile-menu" id="mobileMenu">
+    <button data-view="home"><i>01</i> Home</button>
+    <button data-view="about"><i>02</i> About</button>
+    <button data-view="work"><i>03</i> Work</button>
+    <button data-view="resume"><i>04</i> Résumé</button>
+    <button data-view="awards"><i>05</i> Awards</button>
+    <button data-view="contact"><i>06</i> Contact</button>
+    <button data-view="terminal"><i>&gt;_</i> Terminal</button>
+  </nav>
+
+  <!-- Stage -->
+  <main class="stage" id="stage">
+
+    <!-- HOME -->
+    <section class="view active" data-view="home">
+      <span class="watermark">01</span>
+      <div class="home-grid">
+        <div class="home-text">
+          <p class="overline stg">Data Scientist · AI Engineer</p>
+          <h1 class="display stg">Karuniya<br /><span class="ink-2">Premnath</span></h1>
+          <div class="rule stg"></div>
+          <p class="lead stg">Turning data into intelligent systems — from smarter farms to safer cities.</p>
+          <div class="home-cta stg">
+            <button class="btn btn-solid" data-view="work">View Work</button>
+            <a class="btn btn-line" href="KARUNIYA.pdf" download>Résumé ↓</a>
+          </div>
+          <p class="home-meta stg">Boston, MA &nbsp;·&nbsp; MS Data Science, Northeastern University</p>
+        </div>
+        <div class="home-portrait stg">
+          <button class="arch" id="archTalk" title="Click to talk with me" aria-label="Talk to AI Karuniya">
+            <img class="arch-img" src="assets/karuniya.jpg" alt="Karuniya Premnath"
+                 onerror="this.style.display='none';this.parentElement.querySelector('.arch-mono').style.display='block'" />
+            <div class="arch-mono" style="display:none">KP</div>
+            <span class="arch-talk-hint">▶ Talk to me</span>
+            <span class="arch-est">Est. Boston</span>
+          </button>
+          <ul class="portrait-stats">
+            <li><b>85%+</b><span>crop-health accuracy</span></li>
+            <li><b>3</b><span>featured projects</span></li>
+            <li><b>2</b><span>internships</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="view" data-view="about">
+      <span class="watermark">02</span>
+      <header class="view-head stg"><span class="kicker">About</span><h2 class="title">The person behind the models</h2></header>
+      <div class="about-grid">
+        <div class="about-body stg">
+          <p><span class="dropcap">I</span>'m a Master of Science in Data Science candidate at Northeastern University, with a B.Tech in Artificial Intelligence &amp; Data Science. My work lives where <em>machine learning meets the physical world</em> — predictive analytics, classification systems, and IoT-integrated intelligence.</p>
+          <p>From a smart-farming assistant predicting crop health with 85%+ accuracy to an SVM-powered safe-routing engine, I care about models that leave the notebook and do something useful.</p>
+        </div>
+        <aside class="about-facts stg">
+          <dl>
+            <dt>Location</dt><dd>Boston, Massachusetts</dd>
+            <dt>Education</dt><dd>MS Data Science — Northeastern</dd>
+            <dt>Focus</dt><dd>ML · Deep Learning · Predictive Analytics</dd>
+            <dt>Toolkit</dt><dd>Python · TensorFlow · Scikit-learn</dd>
+          </dl>
+        </aside>
+      </div>
+      <div class="skills stg">
+        <h3 class="sub">Skills</h3>
+        <div class="skill-cols" id="skillCols"></div>
+      </div>
+    </section>
+
+    <!-- WORK -->
+    <section class="view" data-view="work">
+      <span class="watermark">03</span>
+      <header class="view-head stg"><span class="kicker">Selected Work</span><h2 class="title">Projects</h2></header>
+      <div class="work-list" id="workList"></div>
+    </section>
+
+    <!-- RESUME -->
+    <section class="view" data-view="resume">
+      <span class="watermark">04</span>
+      <header class="view-head stg">
+        <span class="kicker">Experience &amp; Education</span>
+        <h2 class="title">Résumé</h2>
+        <a class="btn btn-line head-dl" href="KARUNIYA.pdf" download>Download PDF ↓</a>
+      </header>
+      <div class="resume-cols">
+        <div class="resume-col stg">
+          <h3 class="sub">Experience</h3>
+          <div class="entries" id="expList"></div>
+        </div>
+        <div class="resume-col stg">
+          <h3 class="sub">Education</h3>
+          <div class="entries" id="eduList"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AWARDS -->
+    <section class="view" data-view="awards">
+      <span class="watermark">05</span>
+      <header class="view-head stg"><span class="kicker">Credentials</span><h2 class="title">Awards &amp; Certifications</h2></header>
+      <ol class="awards" id="awardsList"></ol>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="view" data-view="contact">
+      <span class="watermark">06</span>
+      <header class="view-head stg"><span class="kicker">Contact</span><h2 class="title">Let's build something</h2></header>
+      <div class="contact-grid">
+        <div class="contact-info stg">
+          <p class="lead">Open to Data Science, Machine Learning &amp; AI Engineering roles. Email is the surest way to reach me.</p>
+          <ul class="contact-lines">
+            <li><button data-copy="premnath.k@northeastern.edu"><span>Email</span><b>premnath.k@northeastern.edu</b><i>copy</i></button></li>
+            <li><button data-copy="+1-617-516-3070"><span>Phone</span><b>+1-617-516-3070</b><i>copy</i></button></li>
+            <li><a href="https://linkedin.com/in/karuniya-premnath" target="_blank" rel="noopener"><span>LinkedIn</span><b>/in/karuniya-premnath</b><i>open ↗</i></a></li>
+          </ul>
+        </div>
+        <form class="contact-form stg" id="contactForm">
+          <label>Name<input type="text" id="cfName" required /></label>
+          <label>Email<input type="email" id="cfEmail" required /></label>
+          <label>Message<textarea id="cfMsg" rows="4" required></textarea></label>
+          <button type="submit" class="btn btn-solid">Send message →</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- TERMINAL -->
+    <section class="view view-terminal" data-view="terminal">
+      <span class="watermark">&gt;_</span>
+      <div class="terminal" id="terminal">
+        <div class="term-bar"><span></span><span></span><span></span><em>karuniya@portfolio — zsh</em></div>
+        <div class="term-screen" id="termScreen"></div>
+        <div class="term-input-row">
+          <span class="term-prompt">karuniya@portfolio <b>~ %</b></span>
+          <input type="text" id="termInput" autocomplete="off" spellcheck="false" aria-label="Terminal input" />
+        </div>
+      </div>
+      <p class="term-hint">try: <code>help</code> · <code>skills</code> · <code>projects</code> · <code>contact</code> · <code>clear</code></p>
+    </section>
+  </main>
+
+  <!-- Status bar -->
+  <footer class="statusbar">
+    <span class="sb-left">Boston, MA</span>
+    <span class="sb-mid" id="sbSection">Home</span>
+    <span class="sb-right"><span id="sbClock">--:--</span> · © <span id="year"></span></span>
+  </footer>
+
+  <div class="toast" id="toast"></div>
+
+  <!-- AI speaking character -->
+  <button class="asst-fab" id="asstFab" aria-label="Talk to AI Karuniya">
+    <img src="assets/karuniya.jpg" alt=""
+         onerror="this.onerror=null;this.src=&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%239d4b2f'/%3E%3Ctext x='50' y='68' font-size='46' fill='%23f6f0e3' font-family='Georgia,serif' text-anchor='middle'%3EKP%3C/text%3E%3C/svg%3E&quot;" />
+    <span class="fab-ping"></span>
+    <span class="fab-tip">Ask me anything</span>
+  </button>
+
+  <section class="asst" id="asst" aria-hidden="true" aria-label="AI assistant">
+    <header class="asst-head">
+      <div class="asst-avatar" id="asstAvatar">
+        <img src="assets/karuniya.jpg" alt="Karuniya"
+             onerror="this.onerror=null;this.src=&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%239d4b2f'/%3E%3Ctext x='50' y='68' font-size='46' fill='%23f6f0e3' font-family='Georgia,serif' text-anchor='middle'%3EKP%3C/text%3E%3C/svg%3E&quot;" />
+        <span class="asst-wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
+      </div>
+      <div class="asst-id"><b>Karuniya · AI</b><small id="asstStatus">online</small></div>
+      <button class="asst-btn" id="asstMute" title="Mute voice" aria-label="Mute voice">🔊</button>
+      <button class="asst-btn" id="asstClose" title="Close" aria-label="Close">✕</button>
+    </header>
+    <div class="asst-body" id="asstBody"></div>
+    <div class="asst-chips" id="asstChips"></div>
+    <form class="asst-input" id="asstForm">
+      <input id="asstInput" type="text" placeholder="Ask about my skills, projects…" autocomplete="off" />
+      <button type="submit" aria-label="Send">→</button>
+    </form>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
