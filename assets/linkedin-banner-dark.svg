@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1584 1584" width="1584" height="1584" font-family="Georgia, 'Times New Roman', serif">
+  <defs>
+    <linearGradient id="bgd" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#17140d"/>
+      <stop offset="1" stop-color="#221d13"/>
+    </linearGradient>
+    <pattern id="gridd" width="44" height="44" patternUnits="userSpaceOnUse">
+      <path d="M44 0H0V44" fill="none" stroke="#ece3ce" stroke-opacity="0.05" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1584" height="1584" fill="#17140d"/>
+  <g transform="translate(0,594)">
+    <rect width="1584" height="396" fill="url(#bgd)"/>
+    <rect width="1584" height="396" fill="url(#gridd)"/>
+    <rect x="1180" y="0" width="404" height="396" fill="#cd7a53"/>
+    <rect x="1160" y="0" width="20" height="396" fill="#000000" opacity="0.18"/>
+    <text x="1382" y="212" font-size="180" font-weight="700" fill="#17140d" text-anchor="middle" letter-spacing="6">KP</text>
+    <line x1="1250" y1="250" x2="1514" y2="250" stroke="#17140d" stroke-opacity="0.45" stroke-width="1.5"/>
+    <text x="1382" y="286" font-size="19" font-weight="400" fill="#17140d" fill-opacity="0.85" text-anchor="middle" letter-spacing="4" font-family="'Courier New', monospace">EST. BOSTON</text>
+    <text x="96" y="118" font-size="16" letter-spacing="7" fill="#cd7a53" font-family="'Courier New', monospace">DATA SCIENTIST · AI ENGINEER</text>
+    <text x="92" y="205" font-size="76" font-weight="700" fill="#ece3ce">Karuniya Premnath</text>
+    <rect x="96" y="235" width="64" height="3" fill="#cd7a53"/>
+    <text x="96" y="288" font-size="27" fill="#d8cfb8">Machine Learning · Deep Learning · Predictive Analytics</text>
+    <text x="96" y="330" font-size="21" fill="#938a76" font-family="'Courier New', monospace">Python · TensorFlow · Scikit-learn · SVM · LSTM</text>
+    <text x="96" y="366" font-size="18" fill="#938a76">MS Data Science, Northeastern University · Open to DS / ML / AI roles</text>
+  </g>
+</svg>
