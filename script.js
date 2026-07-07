@@ -27,10 +27,18 @@
   ];
 
   const EXPERIENCE = [
-    { date: "Aug 2023", title: "Software Developer Intern", org: "INFILABS · India",
-      points: ["Built and tested AI-driven modules.", "Collaborated on debugging & deployment support."] },
-    { date: "Jun 2023", title: "Software Developer Intern", org: "GNANI.AI · India",
-      points: ["Enhanced speech clarity via noise reduction & normalization in Audacity.", "Supported AI speech-processing workflows for deployment-ready systems."] },
+    { date: "July 2024", title: "Software Developer Intern", org: "Gnani.ai · Bengaluru, India",
+      points: [
+        "Enhanced speech clarity using Audacity through advanced noise reduction and volume normalization.",
+        "Supported AI-based speech processing workflows during live project implementation.",
+        "Improved presentation-quality audio outputs for deployment-ready systems.",
+      ] },
+    { date: "Aug 2023", title: "Software Developer Intern", org: "Infilabs · Tiruchirappalli, India",
+      points: [
+        "Designed and optimized data structures for efficient storage and retrieval across AI-driven modules.",
+        "Built and tested data-driven modules, ensuring clean, well-structured datasets for reliable processing.",
+        "Collaborated with the development team on debugging, code reviews, and deployment support.",
+      ] },
   ];
 
   const EDUCATION = [
@@ -250,7 +258,7 @@
       { k: ["commute", "crime", "route", "routing", "safe", "svm", "maps"], a: "Safe Commute recommends safer travel paths using SVM classification — around 80%+ hotspot-prediction accuracy — with a dynamic safety score and live Google Maps visualization." },
       { k: ["cylinder", "gas", "leak", "safety monitor", "wireless"], a: "The Wireless Cylinder Safety Monitor is an IoT gas-leak detection system with real-time monitoring, wireless data transmission and an emergency alert pipeline." },
       { k: ["education", "study", "degree", "university", "college", "school", "northeastern"], a: "I'm doing my MS in Data Science at Northeastern University in Boston. Before that I earned a B.Tech in AI & Data Science from Saranathan College of Engineering with a 7.94 CGPA." },
-      { k: ["experience", "intern", "job", "career", "worked"], a: "I've interned as a Software Developer at GNANI.AI, working on AI speech processing, and at INFILABS, building and testing AI-driven modules." },
+      { k: ["experience", "intern", "job", "career", "worked"], a: "I've interned as a Software Developer at Gnani.ai in Bengaluru, enhancing AI speech-processing workflows and audio quality, and at Infilabs in Tiruchirappalli, where I designed and optimized data structures and built data-driven modules." },
       { k: ["certif", "award", "credential", "course"], a: "I hold an Executive PG Certification in Data Science & AI from IIT Roorkee (Intellipaat), a certificate in Advanced SoC Design from NIT Trichy, and completed Zoho Catalyst's cloud solutions workshop." },
       { k: ["contact", "email", "reach", "hire", "phone", "linkedin", "connect"], a: "You can email me at premnath.k@northeastern.edu, call +1-617-516-3070, or connect on LinkedIn at /in/karuniya-premnath. I'd love to chat!" },
       { k: ["available", "open", "opportunit", "looking", "recruit", "role", "position"], a: "Yes! I'm actively open to Data Science, Machine Learning and AI Engineering roles. Head to the Contact section or just email me." },
