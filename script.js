@@ -9,28 +9,29 @@
   /* ---------------- DATA ---------------- */
   const SKILLS = [
     { group: "Languages", items: [["Python", "expert"], ["SQL", "advanced"], ["R", "proficient"]] },
-    { group: "Machine Learning", items: [["Scikit-learn", "advanced"], ["TensorFlow", "advanced"], ["Keras", "advanced"], ["SVM", "advanced"], ["LSTM", "proficient"]] },
+    { group: "ML & Modeling", items: [["Scikit-learn", "advanced"], ["TensorFlow", "advanced"], ["Keras", "advanced"], ["XGBoost", "advanced"], ["SVM / LSTM", "advanced"], ["CNN", "proficient"]] },
+    { group: "Analysis & XAI", items: [["SHAP", "advanced"], ["K-Means", "advanced"], ["UMAP", "proficient"], ["Predictive Analytics", "advanced"]] },
     { group: "Visualization", items: [["Matplotlib", "advanced"], ["Seaborn", "advanced"]] },
-    { group: "Tools & Concepts", items: [["Deep Learning", "advanced"], ["Predictive Analytics", "advanced"], ["IoT Integration", "proficient"], ["Google Maps API", "proficient"], ["Audacity", "advanced"]] },
+    { group: "Tools & Platforms", items: [["Firebase", "advanced"], ["Google Maps API", "proficient"], ["IoT Integration", "proficient"], ["Audacity", "advanced"]] },
   ];
 
   const WORK = [
-    { title: "AI-Powered Smart Farming Assistant", year: "Apr 2025",
-      desc: "An AI-driven agricultural assistant fusing IoT sensors with ML models to predict crop health and automate irrigation & pest monitoring from live environmental data.",
-      tags: ["Machine Learning", "IoT", "Predictive Analytics", "Dashboard"], metric: "85%+", metricLabel: "crop-health accuracy" },
-    { title: "Safe Commute — Crime-Aware Routing", year: "Apr 2025",
-      desc: "A smart routing engine using SVM classification to recommend safer travel paths, with a dynamic safety-scoring mechanism and live Google Maps visualization.",
-      tags: ["SVM", "Google Maps API", "Classification"], metric: "80%+", metricLabel: "hotspot accuracy" },
-    { title: "Wireless Cylinder Safety Monitor", year: "Aug 2024",
-      desc: "An IoT-based gas-leak detection system with real-time monitoring, wireless data transmission, and an emergency alert notification pipeline.",
-      tags: ["IoT", "Embedded", "Real-time Alerts"], metric: "24/7", metricLabel: "safety tracking" },
+    { title: "Youth Tobacco Use Prediction & Policy Analysis", year: "Apr 2026",
+      desc: "A multi-country study (GYTS) merging GYTS, WHO MPOWER and World Bank data into a 522 country-year panel. A regularized XGBoost model with SHAP explainability plus K-Means/UMAP clustering pinpointed peer exposure and secondhand smoke as top predictors — and showed policy upgrades could cut youth smoking prevalence by up to 7.34 points in high-risk countries.",
+      tags: ["XGBoost", "SHAP", "K-Means / UMAP", "Policy Analytics"], metric: "187", metricLabel: "countries analyzed" },
+    { title: "Decision-Support System for Smart Agriculture", year: "Apr 2026",
+      desc: "A visualization-first Android platform integrating a CNN for crop-disease detection, an XGBoost crop-recommendation engine (2,200 records, 22 crops) and a soil-analysis module, synced in real time via Firebase. Color-coded, farmer-readable charts turn every AI output into an actionable insight for low-literacy, non-technical users (P–K correlation r = 0.74).",
+      tags: ["CNN", "XGBoost", "Firebase", "Android", "Data Viz"], metric: "22", metricLabel: "crops modeled" },
+    { title: "Wireless Cylinder Safety Monitoring System", year: "Aug 2025",
+      desc: "An IoT-based gas-leak detection system with wireless data transmission for continuous safety tracking, plus an automated emergency-alert pipeline enabling immediate response in industrial and domestic environments.",
+      tags: ["IoT", "Embedded", "Real-time Alerts"], metric: "24/7", metricLabel: "safety monitoring" },
   ];
 
   const EXPERIENCE = [
     { date: "July 2024", title: "Software Developer Intern", org: "Gnani.ai · Bengaluru, India",
       points: [
         "Enhanced speech clarity using Audacity through advanced noise reduction and volume normalization.",
-        "Supported AI-based speech processing workflows during live project implementation.",
+        "Supported AI-based speech-processing workflows during live project implementation.",
         "Improved presentation-quality audio outputs for deployment-ready systems.",
       ] },
     { date: "Aug 2023", title: "Software Developer Intern", org: "Infilabs · Tiruchirappalli, India",
@@ -42,10 +43,10 @@
   ];
 
   const EDUCATION = [
-    { date: "Present", title: "MS, Data Science", org: "Northeastern University · Boston, MA",
-      points: ["Machine Learning · Linear Algebra for Data Science · Essentials of Data Science."] },
-    { date: "2021 – 2025", title: "B.Tech, AI & Data Science", org: "Saranathan College of Engineering · Tamil Nadu",
-      points: ["CGPA: 7.94 / 10."] },
+    { date: "Jan 2026 – Present", title: "MS, Data Science", org: "Northeastern University · Boston, MA",
+      points: ["Expected May 2028 · CGPA 3.667.", "Machine Learning · Essentials of Data Science · Machine Learning Operations."] },
+    { date: "Nov 2021 – Apr 2025", title: "B.Tech, AI & Data Science", org: "Anna University · Tiruchirappalli, Tamil Nadu",
+      points: ["Data Science · Machine Learning · Deep Learning · Artificial Intelligence."] },
   ];
 
   const AWARDS = [
@@ -135,13 +136,13 @@
 
   /* ---------------- THEME ---------------- */
   function initTheme() {
-    const saved = localStorage.getItem("kp-theme2");
+    const saved = localStorage.getItem("kp-theme3");
     if (saved) document.documentElement.dataset.theme = saved;
     $("#themeToggle").addEventListener("click", () => {
-      const next = document.documentElement.dataset.theme === "paper" ? "ink" : "paper";
+      const next = document.documentElement.dataset.theme === "slate" ? "carbon" : "slate";
       document.documentElement.dataset.theme = next;
-      localStorage.setItem("kp-theme2", next);
-      toast(next === "paper" ? "Paper mode" : "Ink mode");
+      localStorage.setItem("kp-theme3", next);
+      toast(next === "slate" ? "Slate mode" : "Carbon mode");
     });
   }
 
@@ -203,7 +204,7 @@
         `  <span class="t-accent">theme</span>      — toggle paper/ink<br>` +
         `  <span class="t-accent">goto</span> [page] — navigate (e.g. goto work)<br>` +
         `  <span class="t-accent">clear</span>      — clear the screen`),
-      about: () => print(`Karuniya Premnath — Data Scientist & AI Engineer, Boston MA.<br><span class="t-dim">MS Data Science @ Northeastern. I build ML that leaves the notebook.</span>`),
+      about: () => print(`Karuniya Premnath — Data Scientist & AI Engineer, Boston MA.<br><span class="t-dim">MS Data Science @ Northeastern. I build ML that leaves the notebook — from public-health policy to smarter farms.</span>`),
       whoami: () => print(`karuniya <span class="t-dim">(guest session)</span>`),
       skills: () => SKILLS.forEach(g => print(`<span class="t-accent">${g.group}:</span> ${g.items.map(i => i[0]).join(", ")}`)),
       projects: () => WORK.forEach((w, i) => print(`<span class="t-accent">${i + 1}.</span> ${w.title} <span class="t-dim">(${w.year}) — ${w.metric} ${w.metricLabel}</span>`)),
@@ -212,7 +213,7 @@
       awards: () => AWARDS.forEach(a => print(`• ${a.name} <span class="t-dim">— ${a.org}</span>`)),
       contact: () => print(`Email: <a href="mailto:premnath.k@northeastern.edu">premnath.k@northeastern.edu</a><br>Phone: +1-617-516-3070<br>LinkedIn: <a href="https://linkedin.com/in/karuniya-premnath" target="_blank" rel="noopener">/in/karuniya-premnath</a>`),
       resume: () => { print(`Opening résumé PDF…`); window.open("KARUNIYA.pdf", "_blank"); },
-      theme: () => { $("#themeToggle").click(); print(`Theme toggled.`); },
+      theme: () => { $("#themeToggle").click(); print(`Theme toggled — slate / carbon.`); },
       date: () => print(new Date().toString()),
       echo: (a) => print(a.join(" ") || ""),
       goto: (a) => { const p = (a[0] || "").toLowerCase(); if (LABELS[p]) { print(`Navigating to ${LABELS[p]}…`); setTimeout(() => setView(p), 350); } else print(`<span class="t-accent">goto:</span> unknown page "${a[0] || ""}". try: home, about, work, resume, awards, contact`); },
@@ -251,22 +252,23 @@
     /* --- knowledge base (first person, from résumé) --- */
     const KB = [
       { k: ["hi", "hello", "hey", "hii", "greetings"], a: "Hi there! 👋 I'm Karuniya — well, my AI stand-in. Ask me about my skills, projects, background, or how to get in touch." },
-      { k: ["who are you", "who r u", "who is", "yourself", "introduce", "about you", "tell me about"], a: "I'm Karuniya Premnath, a Data Scientist and AI Engineer based in Boston. I'm pursuing my MS in Data Science at Northeastern University, and I love building machine-learning systems that work in the real world." },
-      { k: ["skill", "tech", "stack", "tool", "language", "know"], a: "My core toolkit is Python, SQL and R, with machine learning in Scikit-learn, TensorFlow and Keras — including SVMs and LSTMs. I visualize with Matplotlib and Seaborn, and I work with deep learning, predictive analytics and IoT integration." },
-      { k: ["project", "work", "built", "made", "portfolio"], a: "I have three featured projects: an AI-Powered Smart Farming Assistant with 85%+ crop-health accuracy, a crime-aware Safe Commute routing engine using SVM, and a wireless gas-cylinder safety monitor. Ask about any one of them!" },
-      { k: ["farm", "farming", "crop", "agriculture", "iot sensor"], a: "The Smart Farming Assistant fuses IoT sensors with ML models to predict crop health at 85%+ accuracy, automate irrigation and pest monitoring, and it has a dashboard for remote control." },
-      { k: ["commute", "crime", "route", "routing", "safe", "svm", "maps"], a: "Safe Commute recommends safer travel paths using SVM classification — around 80%+ hotspot-prediction accuracy — with a dynamic safety score and live Google Maps visualization." },
-      { k: ["cylinder", "gas", "leak", "safety monitor", "wireless"], a: "The Wireless Cylinder Safety Monitor is an IoT gas-leak detection system with real-time monitoring, wireless data transmission and an emergency alert pipeline." },
-      { k: ["education", "study", "degree", "university", "college", "school", "northeastern"], a: "I'm doing my MS in Data Science at Northeastern University in Boston. Before that I earned a B.Tech in AI & Data Science from Saranathan College of Engineering with a 7.94 CGPA." },
-      { k: ["experience", "intern", "job", "career", "worked"], a: "I've interned as a Software Developer at Gnani.ai in Bengaluru, enhancing AI speech-processing workflows and audio quality, and at Infilabs in Tiruchirappalli, where I designed and optimized data structures and built data-driven modules." },
-      { k: ["certif", "award", "credential", "course"], a: "I hold an Executive PG Certification in Data Science & AI from IIT Roorkee (Intellipaat), a certificate in Advanced SoC Design from NIT Trichy, and completed Zoho Catalyst's cloud solutions workshop." },
+      { k: ["who are you", "who r u", "who is", "yourself", "introduce", "about you", "tell me about"], a: "I'm Karuniya Premnath, a Data Scientist and AI Engineer based in Boston. I'm pursuing my MS in Data Science at Northeastern University, and I love building machine-learning systems that solve real, human problems — from public-health policy to smarter farms." },
+      { k: ["skill", "tech", "stack", "tool", "language", "know"], a: "My core toolkit is Python, SQL and R. For modeling I use Scikit-learn, TensorFlow, Keras and XGBoost — including SVMs, LSTMs and CNNs. I lean on SHAP for explainability and K-Means and UMAP for clustering, visualize with Matplotlib and Seaborn, and build with Firebase, IoT and the Google Maps API." },
+      { k: ["project", "work", "built", "made", "portfolio"], a: "I have three featured projects: a Youth Tobacco Use prediction and policy study across 187 countries, a visualization-first Decision-Support System for smart agriculture, and a wireless gas-cylinder safety monitor. Ask about any one of them!" },
+      { k: ["tobacco", "smoking", "youth", "gyts", "policy", "shap", "public health", "health"], a: "For the Youth Tobacco study I merged GYTS, WHO MPOWER and World Bank data into a 522 country-year panel, then trained a regularized XGBoost model with SHAP explainability and K-Means/UMAP clustering. It flagged peer exposure and secondhand smoke as the top predictors, and showed policy upgrades could cut youth smoking prevalence by up to 7.34 points in high-risk countries." },
+      { k: ["farm", "farming", "crop", "agriculture", "soil", "cnn", "firebase", "android"], a: "The Smart Agriculture project is a visualization-first Android app: a CNN detects crop disease, an XGBoost engine recommends crops across 2,200 records and 22 crops, and a soil module analyses nutrients — all synced through Firebase. Every AI output becomes a color-coded, farmer-readable chart, uncovering patterns like a P–K correlation of 0.74." },
+      { k: ["cylinder", "gas", "leak", "safety monitor", "wireless", "iot"], a: "The Wireless Cylinder Safety Monitoring System is an IoT gas-leak detection system with wireless data transmission for continuous safety tracking and an automated emergency-alert pipeline for immediate response." },
+      { k: ["education", "study", "degree", "university", "college", "school", "northeastern", "anna", "cgpa"], a: "I'm doing my MS in Data Science at Northeastern University in Boston, expected May 2028, with a 3.667 CGPA. Before that I earned a B.Tech in AI & Data Science from Anna University in Tiruchirappalli, India." },
+      { k: ["experience", "intern", "job", "career", "worked", "gnani", "infilabs"], a: "I've interned as a Software Developer at Gnani.ai in Bengaluru, enhancing AI speech-processing workflows and audio quality with Audacity, and at Infilabs in Tiruchirappalli, where I designed and optimized data structures and built data-driven modules." },
+      { k: ["certif", "award", "credential", "course"], a: "I hold an Executive PG Certification in Data Science & AI from IIT Roorkee (Intellipaat), a certificate in Advanced SoC Design from NIT Trichy (PROBE 2023), and completed Zoho Catalyst's cloud solutions workshop." },
       { k: ["contact", "email", "reach", "hire", "phone", "linkedin", "connect"], a: "You can email me at premnath.k@northeastern.edu, call +1-617-516-3070, or connect on LinkedIn at /in/karuniya-premnath. I'd love to chat!" },
       { k: ["available", "open", "opportunit", "looking", "recruit", "role", "position"], a: "Yes! I'm actively open to Data Science, Machine Learning and AI Engineering roles. Head to the Contact section or just email me." },
       { k: ["location", "based", "where", "boston", "live"], a: "I'm based in Boston, Massachusetts." },
       { k: ["resume", "cv", "download"], a: "You can download my résumé from the Résumé section or the button on the home page — it's a one-click PDF." },
       { k: ["thank", "thanks", "cool", "nice", "awesome", "great"], a: "Thank you! 😊 Anything else you'd like to know?" },
-      { k: ["python"], a: "Python is my primary language — I use it for everything from data wrangling to training deep-learning models." },
+      { k: ["python"], a: "Python is my primary language — I use it for everything from data wrangling and clustering to training XGBoost and deep-learning models." },
     ];
+    const GREETING = "Hi! I'm AI Karuniya. Ask me anything about my work, skills or background — I'll answer out loud.";
     const FALLBACK = "Good question! I can tell you about my skills, projects, education, experience, certifications, or how to reach me. Try one of those.";
     function answer(q) {
       const s = q.toLowerCase();
@@ -278,7 +280,7 @@
       return best ? best.a : FALLBACK;
     }
 
-    /* --- speech --- */
+    /* --- speech (browser speechSynthesis) --- */
     let voice = null;
     function pickVoice() {
       const vs = speechSynthesis.getVoices();
@@ -289,14 +291,24 @@
       pickVoice();
       speechSynthesis.onvoiceschanged = pickVoice;
     }
+    const homeOrb = $("#homeOrb");
+    function setSpeaking(on) {
+      avatar.classList.toggle("speaking", on);
+      homeOrb?.classList.toggle("speaking", on);
+      status.textContent = on ? "speaking…" : "online";
+    }
+    function stopVoice() {
+      if ("speechSynthesis" in window) speechSynthesis.cancel();
+      setSpeaking(false);
+    }
     function speak(text) {
       if (muted || !("speechSynthesis" in window)) return;
       speechSynthesis.cancel();
       const u = new SpeechSynthesisUtterance(text.replace(/[👋😊🔊🔇]/g, ""));
       if (voice) u.voice = voice;
       u.rate = 1; u.pitch = 1.05;
-      u.onstart = () => { avatar.classList.add("speaking"); status.textContent = "speaking…"; };
-      u.onend = () => { avatar.classList.remove("speaking"); status.textContent = "online"; };
+      u.onstart = () => setSpeaking(true);
+      u.onend = () => setSpeaking(false);
       speechSynthesis.speak(u);
     }
 
@@ -328,15 +340,13 @@
       fab.classList.add("hidden"); input.focus();
       if (!opened) {
         opened = true;
-        const hi = "Hi! I'm AI Karuniya. Ask me anything about my work, skills or background — I'll answer out loud.";
-        botReply(hi);
+        botReply(GREETING);
       }
     }
     function close() {
       panel.classList.remove("open"); panel.setAttribute("aria-hidden", "true");
       fab.classList.remove("hidden");
-      if ("speechSynthesis" in window) speechSynthesis.cancel();
-      avatar.classList.remove("speaking"); status.textContent = "online";
+      stopVoice();
     }
     fab.addEventListener("click", open);
     $("#asstClose").addEventListener("click", close);
@@ -344,7 +354,7 @@
     muteBtn.addEventListener("click", () => {
       muted = !muted; localStorage.setItem("kp-mute", muted ? "1" : "0");
       muteBtn.textContent = muted ? "🔇" : "🔊";
-      if (muted && "speechSynthesis" in window) speechSynthesis.cancel();
+      if (muted) stopVoice();
       toast(muted ? "Voice off" : "Voice on");
     });
     form.addEventListener("submit", e => {
@@ -372,6 +382,6 @@
     renderSkills(); renderWork(); renderResume(); renderAwards();
     initNav(); initMobile(); initTheme(); initContact(); initClock(); initTerminal(); initAssistant();
     runLoader();
-    console.log("%cKaruniya Premnath — type in the terminal, or press keys 1–6 / T.", "color:#9d4b2f");
+    console.log("%cKaruniya Premnath — type in the terminal, or press keys 1–6 / T.", "color:#363f4d");
   });
 })();
