@@ -204,20 +204,13 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
 .orb-ring.r3 { inset: 52px; border-style: dashed; border-color: var(--line); opacity: 0.7; animation: spin 34s linear infinite; }
 @keyframes spin { to { transform: rotate(360deg); } }
 .arch {
-  position: relative; width: calc(100% - 78px); aspect-ratio: 1; border: none; padding: 0; cursor: pointer;
+  position: relative; width: calc(100% - 78px); aspect-ratio: 1; border: none; padding: 0;
   border-radius: 50%; overflow: hidden; background: linear-gradient(160deg, var(--surface), var(--bg-2));
   box-shadow: var(--shadow); z-index: 2;
 }
 .arch::after { content: ""; position: absolute; inset: 0; border: 1px solid var(--line-2); border-radius: 50%; pointer-events: none; z-index: 3; }
-.arch-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 50%; z-index: 1; filter: grayscale(1) contrast(1.02); transition: filter 0.5s var(--ease); }
-.arch:hover .arch-img { filter: grayscale(0.15) contrast(1.03); }
+.arch-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 50%; z-index: 1; }
 .arch-mono { font-family: var(--serif); font-size: clamp(72px, 12vw, 118px); font-weight: 600; color: var(--accent); }
-.arch-talk-hint {
-  position: absolute; inset: 0; z-index: 4; display: flex; align-items: center; justify-content: center;
-  background: rgba(12, 14, 16, 0.5); color: #fff; font-family: var(--mono); font-size: 12px; letter-spacing: 1px; text-transform: uppercase;
-  opacity: 0; transition: opacity 0.35s var(--ease); border-radius: 50%;
-}
-.arch:hover .arch-talk-hint { opacity: 1; }
 /* live "mic" pill on the orb */
 .orb-live {
   position: absolute; bottom: 4px; left: 50%; transform: translateX(-50%); z-index: 5;
