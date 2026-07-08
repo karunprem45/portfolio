@@ -16,6 +16,10 @@
   ];
 
   const WORK = [
+    { title: "SkillRadar — Live Job-Market Intelligence", year: "Jul 2026",
+      desc: "A self-updating data product tracking the US data-careers job market: 1,300+ postings ingested from 4 APIs every 6 hours via GitHub Actions, rule-based skill extraction validated against a hand-labeled gold set (F1 0.995), a salary-prediction model retrained daily (14% MAE improvement over baseline), KMeans role archetypes, and phone alerts for new openings — all at $0/month.",
+      tags: ["Python", "scikit-learn", "Streamlit", "GitHub Actions", "SQL"], metric: "6h", metricLabel: "refresh cycle",
+      link: "https://skillradar-ywyoyxql2yxvmxmcl2pbxg.streamlit.app/" },
     { title: "Youth Tobacco Use Prediction & Policy Analysis", year: "Apr 2026",
       desc: "A multi-country study (GYTS) merging GYTS, WHO MPOWER and World Bank data into a 522 country-year panel. A regularized XGBoost model with SHAP explainability plus K-Means/UMAP clustering pinpointed peer exposure and secondhand smoke as top predictors — and showed policy upgrades could cut youth smoking prevalence by up to 7.34 points in high-risk countries.",
       tags: ["XGBoost", "SHAP", "K-Means / UMAP", "Policy Analytics"], metric: "187", metricLabel: "countries analyzed" },
@@ -68,7 +72,7 @@
       <article class="work-item" data-view="terminal-noop">
         <div class="wi-no">${String(i + 1).padStart(2, "0")}</div>
         <div>
-          <h3 class="wi-title">${w.title}</h3>
+          <h3 class="wi-title">${w.link ? `<a href="${w.link}" target="_blank" rel="noopener">${w.title} <span class="wi-live">live ↗</span></a>` : w.title}</h3>
           <p class="wi-desc">${w.desc}</p>
           <div class="wi-tags">${w.tags.map(t => `<span class="wi-tag">${t}</span>`).join("")}</div>
         </div>
