@@ -291,10 +291,11 @@
       pickVoice();
       speechSynthesis.onvoiceschanged = pickVoice;
     }
-    const homeOrb = $("#homeOrb");
+    const homeOrb = $("#homeOrb"), bgAvatar = $("#bgAvatar");
     function setSpeaking(on) {
       avatar.classList.toggle("speaking", on);
       homeOrb?.classList.toggle("speaking", on);
+      bgAvatar?.classList.toggle("speaking", on);
       status.textContent = on ? "speaking…" : "online";
     }
     function stopVoice() {
