@@ -1,23 +1,23 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="paper">
+<html lang="en" data-theme="slate">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Karuniya Premnath — Data Scientist & AI Engineer. A classic portfolio of machine-learning work." />
+  <meta name="description" content="Karuniya Premnath — Data Scientist & AI Engineer. A monochrome portfolio of machine-learning work, with a talking AI assistant." />
   <meta name="author" content="Karuniya Premnath" />
   <title>Karuniya Premnath — Data Scientist</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23efe7d6'/><text x='50' y='72' font-size='64' font-family='Georgia,serif' text-anchor='middle' fill='%239d4b2f'>K</text></svg>" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23141619'/><text x='50' y='72' font-size='64' font-family='Georgia,serif' text-anchor='middle' fill='%23e9e9e7'>K</text></svg>" />
 </head>
 <body class="loading">
   <div class="grain" aria-hidden="true"></div>
 
   <!-- Loader -->
   <div class="loader" id="loader">
-    <div class="loader-mono">KP</div>
+    <div class="loader-mono">K<span>P</span></div>
     <div class="loader-line"><span id="loaderBar"></span></div>
     <div class="loader-cap">Karuniya Premnath — Portfolio</div>
   </div>
@@ -67,7 +67,7 @@
           <p class="overline stg">Data Scientist · AI Engineer</p>
           <h1 class="display stg">Karuniya<br /><span class="ink-2">Premnath</span></h1>
           <div class="rule stg"></div>
-          <p class="lead stg">Turning data into intelligent systems — from smarter farms to safer cities.</p>
+          <p class="lead stg">Turning data into intelligent systems — from public-health policy to smarter farms.</p>
           <div class="home-cta stg">
             <button class="btn btn-solid" data-view="work">View Work</button>
             <a class="btn btn-line" href="KARUNIYA.pdf" download>Résumé ↓</a>
@@ -75,15 +75,20 @@
           <p class="home-meta stg">Boston, MA &nbsp;·&nbsp; MS Data Science, Northeastern University</p>
         </div>
         <div class="home-portrait stg">
-          <button class="arch" id="archTalk" title="Click to talk with me" aria-label="Talk to AI Karuniya">
-            <img class="arch-img" src="assets/karuniya.jpg" alt="Karuniya Premnath"
-                 onerror="this.style.display='none';this.parentElement.querySelector('.arch-mono').style.display='block'" />
-            <div class="arch-mono" style="display:none">KP</div>
-            <span class="arch-talk-hint">▶ Talk to me</span>
-            <span class="arch-est">Est. Boston</span>
-          </button>
+          <div class="orb" id="homeOrb">
+            <span class="orb-ring r1" aria-hidden="true"></span>
+            <span class="orb-ring r2" aria-hidden="true"></span>
+            <span class="orb-ring r3" aria-hidden="true"></span>
+            <button class="arch" id="archTalk" title="Click to talk with me" aria-label="Talk to AI Karuniya">
+              <img class="arch-img" src="assets/karuniya.jpg" alt="Karuniya Premnath"
+                   onerror="this.style.display='none';this.parentElement.querySelector('.arch-mono').style.display='block'" />
+              <div class="arch-mono" style="display:none">KP</div>
+              <span class="arch-talk-hint">▶ Talk to me</span>
+            </button>
+            <span class="orb-live"><span class="dot"></span> AI · Live</span>
+          </div>
           <ul class="portrait-stats">
-            <li><b>85%+</b><span>crop-health accuracy</span></li>
+            <li><b>187</b><span>countries analyzed</span></li>
             <li><b>3</b><span>featured projects</span></li>
             <li><b>2</b><span>internships</span></li>
           </ul>
@@ -97,15 +102,15 @@
       <header class="view-head stg"><span class="kicker">About</span><h2 class="title">The person behind the models</h2></header>
       <div class="about-grid">
         <div class="about-body stg">
-          <p><span class="dropcap">I</span>'m a Master of Science in Data Science candidate at Northeastern University, with a B.Tech in Artificial Intelligence &amp; Data Science. My work lives where <em>machine learning meets the physical world</em> — predictive analytics, classification systems, and IoT-integrated intelligence.</p>
-          <p>From a smart-farming assistant predicting crop health with 85%+ accuracy to an SVM-powered safe-routing engine, I care about models that leave the notebook and do something useful.</p>
+          <p><span class="dropcap">I</span>'m a Master of Science in Data Science candidate at Northeastern University, with a B.Tech in Artificial Intelligence &amp; Data Science. My work lives where <em>machine learning meets real decisions</em> — predictive modeling, explainable AI, and visualization that non-technical people can actually act on.</p>
+          <p>From a 187-country study on youth-smoking policy to a visualization-first farming assistant and an IoT gas-safety monitor, I care about models that leave the notebook and change what someone does next.</p>
         </div>
         <aside class="about-facts stg">
           <dl>
             <dt>Location</dt><dd>Boston, Massachusetts</dd>
             <dt>Education</dt><dd>MS Data Science — Northeastern</dd>
-            <dt>Focus</dt><dd>ML · Deep Learning · Predictive Analytics</dd>
-            <dt>Toolkit</dt><dd>Python · TensorFlow · Scikit-learn</dd>
+            <dt>Focus</dt><dd>ML · Explainable AI · Predictive Analytics</dd>
+            <dt>Toolkit</dt><dd>Python · XGBoost · TensorFlow · SHAP</dd>
           </dl>
         </aside>
       </div>
