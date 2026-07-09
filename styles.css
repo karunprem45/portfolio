@@ -258,6 +258,7 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
 .wi-title a:hover { text-decoration: underline; }
 .wi-live { display: inline-block; white-space: nowrap; font-family: var(--mono); font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; vertical-align: middle; border: 1px solid currentColor; border-radius: 100px; padding: 3px 10px; margin-left: 10px; opacity: 0.75; }
 .wi-desc { color: var(--muted); font-size: 15px; margin: 8px 0 12px; max-width: 64ch; }
+.wi-video { display: block; width: 100%; max-width: 640px; border: 1px solid var(--line); border-radius: 10px; margin: 4px 0 14px; }
 .wi-tags { display: flex; flex-wrap: wrap; gap: 8px; }
 .wi-tag { font-family: var(--mono); font-size: 11px; padding: 3px 10px; border: 1px solid var(--line); border-radius: 100px; color: var(--muted); }
 .wi-metric { text-align: right; white-space: nowrap; }
