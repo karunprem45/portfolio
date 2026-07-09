@@ -19,7 +19,8 @@
     { title: "SkillRadar — Live Job-Market Intelligence", year: "Jul 2026",
       desc: "A self-updating data product tracking the US data-careers job market: 1,300+ postings ingested from 4 APIs every 6 hours via GitHub Actions, rule-based skill extraction validated against a hand-labeled gold set (F1 0.995), a salary-prediction model retrained daily (14% MAE improvement over baseline), KMeans role archetypes, and phone alerts for new openings — all at $0/month.",
       tags: ["Python", "scikit-learn", "Streamlit", "GitHub Actions", "SQL"], metric: "6h", metricLabel: "refresh cycle",
-      link: "https://skillradar-ywyoyxql2yxvmxmcl2pbxg.streamlit.app/" },
+      link: "https://skillradar-ywyoyxql2yxvmxmcl2pbxg.streamlit.app/",
+      video: "assets/skillradar-demo.mp4" },
     { title: "Youth Tobacco Use Prediction & Policy Analysis", year: "Apr 2026",
       desc: "A multi-country study (GYTS) merging GYTS, WHO MPOWER and World Bank data into a 522 country-year panel. A regularized XGBoost model with SHAP explainability plus K-Means/UMAP clustering pinpointed peer exposure and secondhand smoke as top predictors — and showed policy upgrades could cut youth smoking prevalence by up to 7.34 points in high-risk countries.",
       tags: ["XGBoost", "SHAP", "K-Means / UMAP", "Policy Analytics"], metric: "187", metricLabel: "countries analyzed" },
@@ -74,6 +75,7 @@
         <div>
           <h3 class="wi-title">${w.link ? `<a href="${w.link}" target="_blank" rel="noopener">${w.title} <span class="wi-live">live ↗</span></a>` : w.title}</h3>
           <p class="wi-desc">${w.desc}</p>
+          ${w.video ? `<video class="wi-video" src="${w.video}" autoplay muted loop playsinline></video>` : ""}
           <div class="wi-tags">${w.tags.map(t => `<span class="wi-tag">${t}</span>`).join("")}</div>
         </div>
         <div class="wi-metric"><b>${w.metric}</b><span>${w.metricLabel}</span><span class="wi-year">${w.year}</span></div>
