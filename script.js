@@ -16,9 +16,9 @@
   ];
 
   const WORK = [
-    { title: "SkillRadar — Live Job-Market Intelligence", year: "Jul 2026",
-      desc: "A self-updating data product tracking the US data-careers job market: 1,300+ postings ingested from 4 APIs every 6 hours via GitHub Actions, rule-based skill extraction validated against a hand-labeled gold set (F1 0.995), a salary-prediction model retrained daily (14% MAE improvement over baseline), KMeans role archetypes, and phone alerts for new openings — all at $0/month.",
-      tags: ["Python", "scikit-learn", "Streamlit", "GitHub Actions", "SQL"], metric: "6h", metricLabel: "refresh cycle",
+    { title: "SkillRadar — Live Job-Market Intelligence", year: "Jul 2026 – present",
+      desc: "A self-updating data product tracking the US data-careers job market, running unattended since July: 10,200+ postings ingested from 4 APIs every 6 hours via GitHub Actions (370+ automated pipeline runs), rule-based skill extraction validated against a hand-labeled gold set (F1 0.995), a salary-prediction model retrained daily on 9,700+ salaried postings (17% MAE improvement over baseline), KMeans role archetypes revealing a $78K analyst-to-ML pay gap, and phone alerts for new openings — all at $0/month.",
+      tags: ["Python", "scikit-learn", "Streamlit", "GitHub Actions", "SQL"], metric: "10K+", metricLabel: "postings tracked",
       link: "https://skillradar-ywyoyxql2yxvmxmcl2pbxg.streamlit.app/",
       video: "assets/skillradar-demo.mp4" },
     { title: "JobFit — Full-Stack Skill Matcher", year: "Aug 2026",
